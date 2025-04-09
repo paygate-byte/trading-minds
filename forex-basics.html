@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forex Basics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #28a745, #007bff);
+      color: #fff;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #007bff;
+      color: white;
+      border-bottom: 3px solid #0056b3;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .content {
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      background-color: #f8f9fa;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .content h2 {
+      color: #007bff;
+    }
+
+    .content ul {
+      list-style-type: square;
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .nav-button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .nav-button:hover {
+      background-color: #218838;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Forex Basics</h1>
+    <p>Understanding the fundamentals of Forex trading.</p>
+  </header>
+
+  <div class="content">
+    <h2>Key Points</h2>
+    <ul>
+      <li>Forex, or foreign exchange, is the global marketplace for currency trading where currencies are exchanged.</li>
+      <li>Trading pairs like EUR/USD represent the relative value of one currency compared to another, forming the basis for forex trades.</li>
+      <li>Forex operates 24 hours a day, 5 days a week, offering flexibility for traders in different time zones.</li>
+      <li>Major participants include central banks, commercial banks, institutional investors, corporations, and retail traders.</li>
+      <li>Forex trading is highly liquid, meaning large volumes of currency can be traded with minimal impact on price.</li>
+      <li>Popular forex strategies include scalping, day trading, swing trading, and position trading, each suited to different trader profiles.</li>
+      <li>The forex market is influenced by geopolitical events, economic data releases, and changes in interest rates.</li>
+    </ul>
+  </div>
+
+  <div class="button-container">
+    <!-- Back button -->
+    <button class="nav-button" onclick="goBack()">Back</button>
+    <!-- Optional button to navigate back to the Forex Hub -->
+    <button class="nav-button" onclick="navigateTo('forex.html')">Forex Hub</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 TradeSignalsHub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

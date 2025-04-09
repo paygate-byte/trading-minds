@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradeSignalsHub - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #007bff, #00d4ff);
+      color: #fff;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #00bcd4;
+      color: white;
+      border-bottom: 3px solid #007bff;
+      animation: slideInFromTop 1.5s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin: 10px 0;
+    }
+
+    main {
+      text-align: center;
+      margin-top: 50px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    form {
+      margin: 0 auto;
+      padding: 20px;
+      width: 350px;
+      background-color: white;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    form label, form input {
+      display: block;
+      margin: 15px auto;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin-top: 20px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInFromTop {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to TradeSignalsHub</h1>
+    <p>Login or Signup to access premium features.</p>
+  </header>
+  <main>
+    <form id="loginForm">
+      <label for="identifier">Phone Number or Email:</label>
+      <input type="text" id="identifier" required placeholder="Enter your phone number or email">
+      <label for="password">Password:</label>
+      <input type="password" id="password" required placeholder="Enter your password">
+      <button type="submit">Login</button>
+    </form>
+    <p>New user? <button onclick="goToSignup()">Signup Here</button></p>
+  </main>
+  <footer>
+    <p>&copy; 2025 TradeSignalsHub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Handle login form submission
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Assume credentials are correct
+      alert("Redirecting to the next page...");
+      window.location.href = "details.html"; // Redirect to the next page for additional details
+    });
+
+    // Redirect to the signup page
+    function goToSignup() {
+      window.location.href = "signup.html"; // Redirect to the signup page
+    }
+  </script>
+</body>
+</html>
