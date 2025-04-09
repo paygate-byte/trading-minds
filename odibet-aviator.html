@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odibet Aviator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff4d4f, #ff758c);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .result {
+      margin: 20px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    button {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff4d4f;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d9363e;
+      transform: scale(1.1);
+    }
+
+    .loading {
+      display: none;
+      font-size: 1.2rem;
+      color: #f8f9fa;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Odibet Aviator</h1>
+  </header>
+
+  <div class="result" id="result">Press "Generate" to predict the next round.</div>
+
+  <div class="button-container">
+    <button onclick="generateNumber()">Generate</button>
+    <div class="loading" id="loading">Loading...</div>
+    <button onclick="goBack()">Back</button>
+  </div>
+
+  <script>
+    function generateNumber() {
+      const loading = document.getElementById("loading");
+      const result = document.getElementById("result");
+      loading.style.display = "block"; // Show loading animation
+      result.textContent = ""; // Clear previous result
+
+      setTimeout(() => {
+        // Hide loading animation
+        loading.style.display = "none";
+
+        // Generate a random number (weighted toward 1.98–4.5 range)
+        const random = Math.random() * (4.5 - 1.98) + 1.98;
+        const roundedNumber = parseFloat(random.toFixed(2)); // 2 decimal points
+
+        // Update result
+        result.textContent = `Next round is above ${roundedNumber}`;
+      }, 2000); // Simulate 2-second loading time
+    }
+
+    function goBack() {
+      window.history.back(); // Navigate back
+    }
+  </script>
+</body>
+</html>
